@@ -1,0 +1,73 @@
+# PyInstaller / build artifacts
+build/
+dist/
+*.spec
+*_log.txt
+fd6_build*_log.txt
+
+# Self-updater scratch (downloaded exe + swap script land in the OS temp dir,
+# but guard against any stray copy in the repo working tree)
+fd6_update.*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Editors / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS junk
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Local test outputs
+*.png.json
+*_test_output.json
+
+# Local FH6 RE artifacts (memory dumps, scan results — huge, do not push)
+.fd6_*.pkl
+.fd6_*.json
+
+# Local test inputs + generation outputs left in repo root
+BluePsyduckTest*.json
+Blue/
+*_checkpoints/
+
+# RE workshop notes — kept locally, not pushed
+memory*.md
+
+# Probe / RE scratch tooling and dumps
+probe_*.py
+probe_*.json
+live_write.py
+*_at_*.json
+fd6_injection_state.json
+post_inject.json
+pre_inject.json
+square_at_*.json
+
+# Tool task / output caches
+tasks/
+
+# Third-party tooling vendored locally — do not redistribute.
+# Only the three project assets below are whitelisted.
+tools/*
+!tools/SplashScreen.gif
+!tools/fd6.ico
+!tools/fd6_128.png
